@@ -214,7 +214,7 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
                   <a
                     title="商用"
                     data-navicon="商用"
-                    href="https://qingyun.huawei.com/?utm_medium=referral&amp;utm_source=consumer.huawei.com"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -235,7 +235,7 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
                   <a
                     title="华为商城"
                     data-navicon="华为商城"
-                    href="https://m.vmall.com/index.html?cid=91712"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
