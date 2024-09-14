@@ -14,7 +14,7 @@ const FHeader = () => {
         <span>消费者业务网站</span>
         <FaAngleDown />
       </div>
-      <div>
+      <div className="bg-white">
         <div className="px-10 text-sm">
           <div className="-ml-5 -mr-5 flex py-8">
             <div className="flex-1 px-5">
