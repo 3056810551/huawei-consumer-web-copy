@@ -2,106 +2,131 @@ import Image from "next/image";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import profilePic from "../assets/logo.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
+import HoverActiveNavBar from "@components/HoverActiveNavBar/HoverActiveNavBar";
 
 interface HeaderProps {
   logoAlt: string;
 }
 
 const FHeader: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isHovered && dropdownRef.current) {
+      // 计算dropdown的高度，并设置为非0值以允许过渡
+      dropdownRef.current.style.height = `${dropdownRef.current.scrollHeight}px`;
+    }
+  }, [isHovered]);
+
   return (
     <>
-      <div className="flex h-6 cursor-pointer items-center bg-black px-10 font-serif text-xs font-medium text-white">
-        <span>消费者业务网站</span>
-        <FaAngleDown />
-      </div>
-      <div className="bg-white">
-        <div className="px-10 text-sm">
-          <div className="-ml-5 -mr-5 flex py-8">
-            <div className="flex-1 px-5">
-              <div className="mb-2">
-                <a
-                  title="个人用户"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-bgname="个人用户"
-                  className="font-medium"
-                >
-                  个人用户
-                </a>
+      <div>
+        <div
+          className="flex h-6 cursor-pointer items-center bg-black px-10 font-serif text-xs font-medium text-white"
+          onMouseEnter={() => setIsHovered(true)}
+        >
+          <span>消费者业务网站</span>
+          <a href="#">
+            <FaAngleDown />
+          </a>
+        </div>
+        <div
+          ref={dropdownRef}
+          className={`left-0 right-0 top-full overflow-hidden border border-gray-200 bg-white shadow-lg transition-all duration-300 ease-in-out`}
+          style={{
+            height: isHovered ? `${dropdownRef.current?.scrollHeight}px` : "0",
+          }}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <div className="px-10 text-sm">
+            <div className="-ml-5 -mr-5 flex py-8">
+              <div className="flex-1 px-5">
+                <div className="mb-2">
+                  <a
+                    title="个人用户"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-bgname="个人用户"
+                    className="font-medium"
+                  >
+                    个人用户
+                  </a>
+                </div>
+
+                <p className="text-gray-7f">
+                  手机，PC和平板，穿戴设备等个人及家用产品
+                </p>
               </div>
 
-              <p className="text-gray-7f">
-                手机，PC和平板，穿戴设备等个人及家用产品
-              </p>
-            </div>
+              <div className="flex-1 px-5">
+                <div className="relative mb-2 flex items-center text-red-700">
+                  <a
+                    title="集团网站"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-bgname="集团网站"
+                    href="https://www.huawei.com/cn/"
+                    className="font-medium"
+                  >
+                    集团网站
+                  </a>
+                  <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
+                    <FaAngleRight />
+                  </span>
+                </div>
 
-            <div className="flex-1 px-5">
-              <div className="relative mb-2 flex items-center text-red-700">
-                <a
-                  title="集团网站"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-bgname="集团网站"
-                  href="https://www.huawei.com/cn/"
-                  className="font-medium"
-                >
-                  集团网站
-                </a>
-                <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
-                  <FaAngleRight />
-                </span>
+                <p className="text-sm text-gray-7f">
+                  公司信息，社会责任，新闻，展会活动，行业洞察等等
+                </p>
               </div>
 
-              <p className="text-sm text-gray-7f">
-                公司信息，社会责任，新闻，展会活动，行业洞察等等
-              </p>
-            </div>
+              <div className="flex-1 px-5">
+                <div className="relative mb-2 flex items-center text-red-700">
+                  <a
+                    title="企业用户"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-bgname="企业用户"
+                    href="https://e.huawei.com/cn/"
+                    className="font-medium"
+                  >
+                    企业用户
+                  </a>
+                  <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
+                    <FaAngleRight />
+                  </span>
+                </div>
 
-            <div className="flex-1 px-5">
-              <div className="relative mb-2 flex items-center text-red-700">
-                <a
-                  title="企业用户"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-bgname="企业用户"
-                  href="https://e.huawei.com/cn/"
-                  className="font-medium"
-                >
-                  企业用户
-                </a>
-                <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
-                  <FaAngleRight />
-                </span>
+                <p className="text-sm text-gray-7f">
+                  企业商用产品、解决方案和云服务
+                </p>
               </div>
 
-              <p className="text-sm text-gray-7f">
-                企业商用产品、解决方案和云服务
-              </p>
-            </div>
+              <div className="flex-1 px-5">
+                <div className="relative mb-2 flex items-center text-red-700">
+                  <a
+                    title="运营商用户"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-bgname="运营商用户"
+                    href="https://carrier.huawei.com/cn/"
+                    className="font-medium"
+                  >
+                    运营商用户
+                  </a>
+                  <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
+                    <FaAngleRight />
+                  </span>
+                </div>
 
-            <div className="flex-1 px-5">
-              <div className="relative mb-2 flex items-center text-red-700">
-                <a
-                  title="运营商用户"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-bgname="运营商用户"
-                  href="https://carrier.huawei.com/cn/"
-                  className="font-medium"
-                >
-                  运营商用户
-                </a>
-                <span className="fa-solid ml-2 transition-transform duration-500 hover:translate-x-4">
-                  <FaAngleRight />
-                </span>
+                <p className="text-sm text-gray-7f">
+                  运营商网络解决方案、产品及服务
+                </p>
               </div>
-
-              <p className="text-sm text-gray-7f">
-                运营商网络解决方案、产品及服务
-              </p>
             </div>
           </div>
         </div>
@@ -125,6 +150,34 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
 
   const hasBorder = scrollY > 20;
 
+  const navigationFItems = [
+    { content: "手机", href: "#", isActive: true },
+    { content: "穿戴", href: "#" },
+    { content: "电脑", href: "#" },
+    { content: "平板", href: "#" },
+    { content: "智慧屏", href: "#" },
+    { content: "耳机音箱", href: "#" },
+    { content: "全屋智能", href: "#" },
+    { content: "路由器", href: "#" },
+    { content: "HarmonyOS 4", href: "#" },
+  ];
+  const navigationSItems = [
+    { content: "服务支持", href: "#" },
+    { content: "零售店", href: "#" },
+    { content: "商用", href: "#" },
+    { content: <CiSearch className="h-5 w-5" />, href: "#" },
+    { content: <CgProfile className="h-5 w-5" />, href: "#", isActive: true },
+    {
+      content: (
+        <span className="rounded-md border border-gray-300 px-6 py-1 text-xs hover:border-black">
+          华为商城
+        </span>
+      ),
+      href: "#",
+      appointUlclassName: "-mr-10",
+    },
+  ];
+
   return (
     <>
       <div
@@ -136,115 +189,18 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
           </a>
           <nav className="ml-16 mr-10 flex w-64 flex-1 items-center justify-between">
             <div>
-              <ul className="flex font-bold">
-                <li className="mr-5 hover:bg-slate-400">
-                  <a title="手机" data-navicon="手机" href="/cn/phones/">
-                    手机
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="穿戴" data-navicon="穿戴" href="/cn/wearables/">
-                    穿戴
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="电脑" data-navicon="电脑" href="/cn/laptops/">
-                    电脑
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="平板" data-navicon="平板" href="/cn/tablets/">
-                    平板
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="智慧屏" data-navicon="智慧屏" href="/cn/visions/">
-                    智慧屏
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="耳机音箱" data-navicon="耳机音箱" href="/cn/audio/">
-                    耳机音箱
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a
-                    title="全屋智能"
-                    data-navicon="全屋智能"
-                    href="/cn/wholehome/"
-                  >
-                    全屋智能
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a title="路由器" data-navicon="路由器" href="/cn/routers/">
-                    路由器
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a
-                    title="HarmonyOS 4"
-                    data-navicon="HarmonyOS 4"
-                    href="/cn/harmonyos-4/"
-                  >
-                    HarmonyOS 4
-                  </a>
-                </li>
-              </ul>
+              <HoverActiveNavBar
+                items={navigationFItems}
+                ulClassName="flex font-bold"
+                liclassName="relative mr-5"
+              />
             </div>
             <div className="font-medium">
-              <ul className="flex items-center">
-                <li className="mr-5">
-                  <a
-                    title="服务支持"
-                    data-navicon="服务支持"
-                    href="/cn/support/"
-                  >
-                    服务支持
-                  </a>
-                </li>
-
-                <li className="mr-5">
-                  <a title="零售店" data-navicon="零售店" href="/cn/retail/">
-                    零售店
-                  </a>
-                </li>
-
-                <li className="mr-5">
-                  <a
-                    title="商用"
-                    data-navicon="商用"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    商用
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a href="#">
-                    <CiSearch className="h-5 w-5" />
-                  </a>
-                </li>
-                <li className="mr-5">
-                  <a href="#">
-                    <CgProfile className="h-5 w-5" />
-                  </a>
-                </li>
-                <li className="-mr-10">
-                  <a
-                    title="华为商城"
-                    data-navicon="华为商城"
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span className="rounded-md border border-gray-300 px-6 py-1 text-xs hover:border-black">
-                      华为商城
-                    </span>
-                  </a>
-                </li>
-              </ul>
+              <HoverActiveNavBar
+                items={navigationSItems}
+                ulClassName="flex items-center"
+                liclassName="relative mr-5"
+              />
             </div>
           </nav>
         </div>
