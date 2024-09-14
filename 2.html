@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect with Tailwind</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+      <div className="relative mb-2 flex items-center text-red-700">
+        <a
+          title="集团网站"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-bgname="集团网站"
+          href="https://www.huawei.com/cn/"
+          className="font-medium"
+        >
+          集团网站
+        </a>
+        <span
+          className="fa-solid fa-angle-right ml-2 transition-transform duration-500 hover:translate-x-4"
+        >
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
