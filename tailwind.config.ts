@@ -19,6 +19,20 @@ const config: Config = {
         foreground: "var(--foreground)",
         "gray-7f": "#7f7f7f",
       },
+      boxShadow: {
+        "no-shadow": "rgb(0, 0, 0) 0px 0px 0px !important",
+        "no-text-shadow": "rgb(255, 255, 255) 0px 0px 0px !important",
+      },
+      lineHeight: {
+        "1.25": "1.25",
+        "1.6": "1.6",
+      },
+      width: {
+        "170": "680px",
+      },
+      height: {
+        "182": "728px",
+      },
     },
   },
   plugins: [],

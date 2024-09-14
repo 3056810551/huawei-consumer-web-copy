@@ -2,12 +2,15 @@ import Image from "next/image";
 import { FaAngleDown } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import profilePic from "../assets/logo.svg";
+import { useEffect, useState } from "react";
+import { CiSearch } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
 
 interface HeaderProps {
   logoAlt: string;
 }
 
-const FHeader = () => {
+const FHeader: React.FC = () => {
   return (
     <>
       <div className="flex h-6 cursor-pointer items-center bg-black px-10 font-serif text-xs font-medium text-white">
@@ -52,7 +55,7 @@ const FHeader = () => {
                 </span>
               </div>
 
-              <p className="text-gray-7f text-sm">
+              <p className="text-sm text-gray-7f">
                 公司信息，社会责任，新闻，展会活动，行业洞察等等
               </p>
             </div>
@@ -74,7 +77,7 @@ const FHeader = () => {
                 </span>
               </div>
 
-              <p className="text-gray-7f text-sm">
+              <p className="text-sm text-gray-7f">
                 企业商用产品、解决方案和云服务
               </p>
             </div>
@@ -96,7 +99,7 @@ const FHeader = () => {
                 </span>
               </div>
 
-              <p className="text-gray-7f text-sm">
+              <p className="text-sm text-gray-7f">
                 运营商网络解决方案、产品及服务
               </p>
             </div>
@@ -108,9 +111,25 @@ const FHeader = () => {
 };
 
 const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
+  const [scrollY, setScrollY] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const hasBorder = scrollY > 20;
+
   return (
     <>
-      <div className="sticky top-0 bg-white font-sans">
+      <div
+        className={`sticky top-0 z-50 bg-white font-sans ${hasBorder ? "border-b border-gray-300" : ""}`}
+      >
         <div className="flex h-14 w-full items-center px-10 py-0">
           <a title="logo" href="#" data-navicon="logo">
             <Image src={profilePic} width={110} alt={logoAlt} />
@@ -173,8 +192,8 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
                 </li>
               </ul>
             </div>
-            <div>
-              <ul className="flex">
+            <div className="font-medium">
+              <ul className="flex items-center">
                 <li className="mr-5">
                   <a
                     title="服务支持"
@@ -202,8 +221,17 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
                     商用
                   </a>
                 </li>
-
                 <li className="mr-5">
+                  <a href="#">
+                    <CiSearch className="h-5 w-5" />
+                  </a>
+                </li>
+                <li className="mr-5">
+                  <a href="#">
+                    <CgProfile className="h-5 w-5" />
+                  </a>
+                </li>
+                <li className="-mr-10">
                   <a
                     title="华为商城"
                     data-navicon="华为商城"
@@ -211,7 +239,9 @@ const SHeader: React.FC<HeaderProps> = ({ logoAlt }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    华为商城
+                    <span className="rounded-md border border-gray-300 px-6 py-1 text-xs hover:border-black">
+                      华为商城
+                    </span>
                   </a>
                 </li>
               </ul>

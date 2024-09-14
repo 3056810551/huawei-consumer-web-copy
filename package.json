@@ -2,22 +2,31 @@
   "name": "huaweb-webshop",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "node ./server/index.js"
   },
   "dependencies": {
+    "antd": "^5.20.6",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-video": "^1.5.3",
+    "video-react": "^0.16.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/video-react": "^0.15.8",
     "eslint": "^8",
     "eslint-config-next": "14.2.11",
     "postcss": "^8",

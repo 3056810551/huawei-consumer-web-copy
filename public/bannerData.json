@@ -1,0 +1,61 @@
+[
+  {
+    "src": "http://localhost:3000/mate-xt-ultimate-design-pc2.jpg",
+    "title": "HUAWEI nova Flip",
+    "description": "HUAWEI Mate XT 非凡大师",
+    "textColor": "white",
+    "boxShadow": "no-shadow"
+  },
+  {
+    "src": "http://localhost:3000/pc-nova-flip.jpg",
+    "title": "HUAWEI nova Flip",
+    "description": "怦 然 新 动"
+  },
+  {
+    "src": "http://localhost:3000/pc-matepad-pro-12-2.jpg",
+    "title": "HUAWEI MatePad Pro 12.2 英寸",
+    "description": "创 作 至 美"
+  },
+  {
+    "src": "http://localhost:3000/pc-matebook-gt-14.jpg",
+    "title": "HUAWEI MateBook GT 14",
+    "description": "超 能 旗 舰"
+  },
+  {
+    "src": "http://localhost:3000/pc-matepad-air.jpg",
+    "title": "HUAWEI MatePad Air",
+    "description": "轻 出 色　趣 出 圈"
+  },
+  {
+    "src": "http://localhost:3000/pura-70-ultra-pc.jpg",
+    "title": "HUAWEI Pura 70 Ultra",
+    "description": "锐 意 向 前"
+  },
+  {
+    "src": "http://localhost:3000/pura-70-pro-pc.jpg",
+    "title": "HUAWEI Pura 70 Pro",
+    "description": "锐 意 向 前"
+  },
+  {
+    "src": "http://localhost:3000/pc-s5-pro.jpg",
+    "title": "华为智慧屏 S5 Pro",
+    "description": "全 家 人 的 “巨 幕 手 机”"
+  },
+  {
+    "src": "http://localhost:3000/pc-watch-fit-3.jpg",
+    "title": "HUAWEI WATCH FIT 3",
+    "description": "大 方 出 场　时 尚 有 方"
+  },
+  {
+    "src": "http://localhost:3000/pc-freebuds-6i.jpg",
+    "title": "HUAWEI FreeBuds 6i",
+    "description": ""
+  },
+  {
+    "src": "http://localhost:3000/xmage-pc.jpg",
+    "title": "2024 华为影像大赛",
+    "description": "5 月 8 日 - 9 月 15 日",
+    "textColor": "white",
+    "boxShadow": "no-shadow"
+  }
+]
