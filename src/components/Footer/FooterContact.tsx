@@ -8,19 +8,6 @@ import Image from "next/image";
 const FooterContact: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // const defineAfterStyles = {
-  //   content: "",
-  //   position: "absolute",
-  //   left: "50%",
-  //   bottom: "-20px",
-  //   width: "10px",
-  //   height: "30px",
-  //   backgroundRepeat: "no-repeat",
-  //   backgroundPosition: "left center",
-  //   transform: "translateX(-50%) rotate(-90deg)",
-  //   backgroundImage: `data:image/svg+xml,%20%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='210'%20height='200'%20viewBox='0%200%20210%20200'%3E%20%3Cpath%20id='%E8%81%94%E5%90%88_25'%20data-name='%E8%81%94%E5%90%88%2025'%20d='M-6123.714-1439.715a6,6,0,0,1-6-6v-87.2l-8.981-5.056a2,2,0,0,1,0-3.484l8.981-5.056v-87.2a6,6,0,0,1,6-6h188a6,6,0,0,1,6,6v188a6,6,0,0,1-6,6Z'%20transform='translate(6139.715%201639.715)'/%3E%20%3C/svg%3E%20`,
-  // };
-
   const footerSections: { title: string; links: FooterLinkProps[] }[] = [
     {
       title: "在线支持",

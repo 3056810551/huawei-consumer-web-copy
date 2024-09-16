@@ -7,7 +7,7 @@
 "use client";
 
 import Footer from "@components/Footer/Footer";
-import Header from "@components/Header";
+import Header from "@components/Header/Header";
 import HomeMainBanner from "@components/HomeMainBanner";
 import { useEffect, useState } from "react";
 
