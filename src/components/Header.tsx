@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { FaAngleDown } from "react-icons/fa6";
+import { FaAngleUp } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
-import profilePic from "../assets/logo.svg";
 import { useEffect, useRef, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import HoverActiveNavBar from "@components/HoverActiveNavBar/HoverActiveNavBar";
-
+import profilePic from "../assets/logo.svg";
 interface HeaderProps {
   logoAlt: string;
 }
@@ -17,7 +17,6 @@ const FHeader: React.FC = () => {
 
   useEffect(() => {
     if (isHovered && dropdownRef.current) {
-      // 计算dropdown的高度，并设置为非0值以允许过渡
       dropdownRef.current.style.height = `${dropdownRef.current.scrollHeight}px`;
     }
   }, [isHovered]);
@@ -30,8 +29,8 @@ const FHeader: React.FC = () => {
           onMouseEnter={() => setIsHovered(true)}
         >
           <span>消费者业务网站</span>
-          <a href="#">
-            <FaAngleDown />
+          <a href="#" className="ml-1">
+            {isHovered ? <FaAngleUp /> : <FaAngleDown />}
           </a>
         </div>
         <div

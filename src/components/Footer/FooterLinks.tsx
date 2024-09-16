@@ -1,25 +1,19 @@
 import { useEffect, useState } from "react";
+import { FooterSectionProps } from "./type";
 
-type FooterLinkProps = {
-  text: string;
-  href?: string;
-};
-
-type FooterSectionProps = {
-  title: string;
-  links: FooterLinkProps[];
-};
-
-const FooterSection: React.FC<FooterSectionProps> = ({ title, links }) => {
+export const FooterSection: React.FC<FooterSectionProps> = ({
+  title,
+  links,
+  marginB = "mb-12",
+}) => {
+  const theTitleClass = `${marginB} no-shadow  text-base font-bold leading-6 tracking-wide text-black`;
   return (
     <div className="basis-1/5">
       <div>
-        <div className="no-shadow mb-12 text-base font-bold leading-6 tracking-wide text-black">
-          {title}
-        </div>
+        <div className={theTitleClass}>{title}</div>
         <ul className="text-footer-links-color text-sm font-normal leading-6">
           {links.map((link, index) => (
-            <li key={index} className="mb-1">
+            <li key={index} className="mb-1 mr-3">
               <a href={link.href || "#"}>{link.text}</a>
             </li>
           ))}
@@ -51,7 +45,7 @@ const FooterLinks: React.FC = () => {
 
   return (
     <>
-      <div className="border-b border-gray-300 py-20">
+      <div className="border-b border-slate-200 pb-16 pt-20">
         <div className="flex flex-wrap">
           {footerSections.map(({ title, links }, index) => (
             <FooterSection key={index} title={title} links={links} />
