@@ -9,6 +9,7 @@
 import Footer from "@components/Footer/Footer";
 import Header from "@components/Header/Header";
 import HomeMainBanner from "@components/HomeMainBanner";
+import ProductsDisplay from "@components/ProductsDisplay/ProductsDisplay";
 import { useEffect, useState } from "react";
 
 type Banner = {
@@ -56,6 +57,7 @@ export default function Page() {
           }
         />
       ))}
+      <ProductsDisplay />
       <Footer />
     </>
   );

@@ -35,6 +35,9 @@ const config: Config = {
       height: {
         "182": "728px",
       },
+      fontSize: {
+        "40": "40px",
+      },
     },
   },
   plugins: [],

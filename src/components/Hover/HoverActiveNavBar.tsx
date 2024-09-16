@@ -6,6 +6,7 @@ interface HoverActiveNavItemProps {
   isActive?: boolean; // 标记当前项是否为激活状态
   liclassName?: string; // 自定义类名
   appointUlclassName?: string; // 指定li的样式
+  isProductsDisplay?: boolean;
 }
 
 interface NavigationListProps {
@@ -17,6 +18,7 @@ interface NavigationListProps {
   }[];
   ulClassName?: string;
   liclassName?: string;
+  isProductsDisplay?: boolean;
 }
 
 export const HoverActiveNavItem: React.FC<HoverActiveNavItemProps> = ({
@@ -25,6 +27,7 @@ export const HoverActiveNavItem: React.FC<HoverActiveNavItemProps> = ({
   isActive,
   liclassName,
   appointUlclassName,
+  isProductsDisplay = false,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -32,6 +35,7 @@ export const HoverActiveNavItem: React.FC<HoverActiveNavItemProps> = ({
     <li className={`${liclassName} ${appointUlclassName ?? ""}`}>
       <a
         href={href}
+        className={`${isProductsDisplay ? "text-stone-500" : ""} font-serif`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -52,6 +56,7 @@ const HoverActiveNavBar: React.FC<NavigationListProps> = ({
   items,
   ulClassName,
   liclassName,
+  isProductsDisplay = false,
 }) => {
   return (
     <ul className={`${ulClassName}`}>
@@ -66,6 +71,7 @@ const HoverActiveNavBar: React.FC<NavigationListProps> = ({
               : liclassName
           }
           appointUlclassName={item.appointUlclassName}
+          isProductsDisplay={isProductsDisplay}
         />
       ))}
     </ul>
