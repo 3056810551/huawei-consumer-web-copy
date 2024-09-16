@@ -18,10 +18,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "gray-7f": "#7f7f7f",
+        "footer-links-color": "#767676",
       },
       boxShadow: {
         "no-shadow": "rgb(0, 0, 0) 0px 0px 0px !important",
         "no-text-shadow": "rgb(255, 255, 255) 0px 0px 0px !important",
+        "text-shadow-custom": "rgb(127, 127, 127) 0px 0px 0px !important",
       },
       lineHeight: {
         "1.25": "1.25",

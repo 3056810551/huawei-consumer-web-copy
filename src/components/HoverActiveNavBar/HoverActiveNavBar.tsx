@@ -60,7 +60,11 @@ const HoverActiveNavBar: React.FC<NavigationListProps> = ({
           key={index}
           content={item.content}
           href={item.href}
-          liclassName={`${liclassName}`}
+          liclassName={
+            item.appointUlclassName === "-mr-10"
+              ? "relative -mr-10"
+              : liclassName
+          }
           appointUlclassName={item.appointUlclassName}
         />
       ))}
