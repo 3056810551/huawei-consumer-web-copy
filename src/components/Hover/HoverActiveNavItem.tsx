@@ -9,6 +9,7 @@ export const HoverActiveNavItem: React.FC<HoverActiveNavItemProps> = ({
   liclassName,
   appointUlclassName,
   isProductsDisplay = false,
+  isActive,
   ...props
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,7 +24,7 @@ export const HoverActiveNavItem: React.FC<HoverActiveNavItemProps> = ({
   };
 
   let defineSpanClass = {};
-  if (props.isActive) {
+  if (isActive) {
     defineSpanClass = {
       transform:
         isHovered ||
