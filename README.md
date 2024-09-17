@@ -6,6 +6,8 @@
 
 使用React + Next + Typescript + Tailwind CSS 进行开发。
 
+[消费者业务网站](https://consumer.huawei.com/cn/)
+
 ```
 https://consumer.huawei.com/cn/
 ```
