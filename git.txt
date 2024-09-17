@@ -1,0 +1,8 @@
+git remote add origin https://github.com/3056810551/test.git
+git branch -M main
+git push -u origin main
+
+
+git remote add origin https://gitee.com/g-d_1/huawei-consumer-web-copy.git
+git branch -M main
+git push -u origin main
