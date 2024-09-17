@@ -1,4 +1,5 @@
 import HoverActiveNavBar from "@components/Hover/HoverActiveNavBar";
+import ProductGrid from "./ProductGrid";
 
 const ProductsDisplay: React.FC = ({}) => {
   const navigationFItems = [
@@ -12,7 +13,7 @@ const ProductsDisplay: React.FC = ({}) => {
 
   return (
     <>
-      <div className="w-full overflow-hidden px-20 py-20">
+      <div className="w-full overflow-hidden px-10 py-20">
         <div className="mx-auto mb-10">
           <div className="no-shadow text-40 px-10 text-center font-bold leading-tight text-black">
             所有产品
@@ -27,7 +28,7 @@ const ProductsDisplay: React.FC = ({}) => {
               isProductsDisplay={true}
             />
           </div>
-          <div className="mx-auto pt-8"></div>
+          <ProductGrid />
         </div>
       </div>
     </>

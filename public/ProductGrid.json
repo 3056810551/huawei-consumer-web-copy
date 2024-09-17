@@ -1,0 +1,184 @@
+[
+  {
+    "type": "手机",
+    "data": [
+      {
+        "productName": "手机",
+        "productImageSrc": "http://localhost:3000/pura70-pro-plus.jpg",
+        "productInfo": "洞悉万象，开启美学新"
+      },
+      {
+        "productName": "HUAWEI Pura 70 Pro+",
+        "productImageSrc": "http://localhost:3000/pura70-pro-plus.jpg"
+      },
+      {
+        "productName": "HUAWEI Pura 70",
+        "productImageSrc": "http://localhost:3000/pocket-2.jpg"
+      },
+      {
+        "productName": "HUAWEI Pocket 2",
+        "productImageSrc": "http://localhost:3000/pocket-2.jpg"
+      },
+      {
+        "productName": "HUAWEI Mate 60 Pro",
+        "productImageSrc": "http://localhost:3000/mate-60-pro.jpg"
+      }
+    ]
+  },
+  {
+    "type": "穿戴",
+    "data": [
+      {
+        "productName": "穿戴",
+        "productImageSrc": "http://localhost:3000/wearables.jpg",
+        "productInfo": "时尚单品，腕上智能助手，也是运动健康专家"
+      },
+      {
+        "productName": "HUAWEI WATCH GT 4",
+        "productImageSrc": "http://localhost:3000/gt4.jpg"
+      },
+      {
+        "productName": "HUAWEI WATCH 4 Pro 太空探索",
+        "productImageSrc": "http://localhost:3000/watch-4-pro-space-explorer.jpg"
+      },
+      {
+        "productName": "华为手环 9",
+        "productImageSrc": "http://localhost:3000/band9.jpg"
+      },
+      {
+        "productName": "华为儿童手表 5 Pro",
+        "productImageSrc": "http://localhost:3000/kids-watch-5-pro.jpg"
+      }
+    ]
+  },
+  {
+    "type": "手机",
+    "data": [
+      {
+        "productName": "手机",
+        "productImageSrc": "http://localhost:3000/pura70-pro-plus.jpg",
+        "productInfo": "洞悉万象，开启美学新"
+      },
+      {
+        "productName": "HUAWEI Pura 70 Pro+",
+        "productImageSrc": "http://localhost:3000/pura70-pro-plus.jpg"
+      },
+      {
+        "productName": "HUAWEI Pura 70",
+        "productImageSrc": "http://localhost:3000/pocket-2.jpg"
+      },
+      {
+        "productName": "HUAWEI Pocket 2",
+        "productImageSrc": "http://localhost:3000/pocket-2.jpg"
+      },
+      {
+        "productName": "HUAWEI Mate 60 Pro",
+        "productImageSrc": "http://localhost:3000/mate-60-pro.jpg"
+      }
+    ]
+  },
+  {
+    "type": "电脑",
+    "data": [
+      {
+        "productName": "电脑",
+        "productImageSrc": "http://localhost:3000/laptops.jpg",
+        "productInfo": "设备协同，生态融合，体验智慧办公新场景"
+      },
+      {
+        "productName": "HUAWEI MateBook X Pro",
+        "productImageSrc": "http://localhost:3000/matebook-x-pro-ultra-premium-edition.jpg"
+      },
+      {
+        "productName": "HUAWEI MateBook 14",
+        "productImageSrc": "http://localhost:3000/matebook-14-2024.jpg"
+      },
+      {
+        "productName": "HUAWEI MateBook D 16",
+        "productImageSrc": "http://localhost:3000/matebook-d-16-2024.jpg"
+      },
+      {
+        "productName": "HUAWEI MateBook D 14",
+        "productImageSrc": "http://localhost:3000/matebook-d14.jpg"
+      }
+    ]
+  },
+  {
+    "type": "平板",
+    "data": [
+      {
+        "productName": "平板",
+        "productImageSrc": "http://localhost:3000/tablets.jpg",
+        "productInfo": "多才多艺，把握灵感创意"
+      },
+      {
+        "productName": "HUAWEI MatePad Pro 13.2",
+        "productImageSrc": "http://localhost:3000/matepad-pro-13.2.jpg"
+      },
+      {
+        "productName": "HUAWEI MatePad Pro 11",
+        "productImageSrc": "http://localhost:3000/matepad-pro-11-2024.jpg"
+      },
+      {
+        "productName": "HUAWEI MatePad 11.5 S",
+        "productImageSrc": "http://localhost:3000/matepad-11.5-s.jpg"
+      },
+      {
+        "productName": "HUAWEI MatePad SE",
+        "productImageSrc": "http://localhost:3000/matepad-se-11.jpg"
+      }
+    ]
+  },
+  {
+    "type": "智慧屏",
+    "data": [
+      {
+        "productName": "智慧屏",
+        "productImageSrc": "http://localhost:3000/visions.jpg",
+        "productInfo": "精彩好戏，亲友畅聊，在指尖无缝流转，在大屏沉浸上演"
+      },
+      {
+        "productName": "华为智慧屏 V5 Pro",
+        "productImageSrc": "http://localhost:3000/v5-pro.jpg"
+      },
+      {
+        "productName": "华为Vision智慧屏 4 Pro",
+        "productImageSrc": "http://localhost:3000/vision4pro.jpg"
+      },
+      {
+        "productName": "华为智慧屏 S5",
+        "productImageSrc": "http://localhost:3000/s5.jpg"
+      },
+      {
+        "productName": "华为智慧屏 S5 Pro",
+        "productImageSrc": "http://localhost:3000/home-s5-pro.jpg"
+      }
+    ]
+  },
+  {
+    "type": "耳机音箱",
+    "data": [
+      {
+        "productName": "耳机音箱",
+        "productImageSrc": "http://localhost:3000/audio.jpg",
+        "productInfo": "美妙声音，装点美好生活"
+      },
+      {
+        "productName": "HUAWEI FreeBuds Pro 3",
+        "productImageSrc": "http://localhost:3000/freebuds-pro-3.jpg"
+      },
+      {
+        "productName": "华UAWEI FreeBuds Lipstick 2 口红耳机",
+        "productImageSrc": "http://localhost:3000/freebuds-lipstick-2.jpg"
+      },
+      {
+        "productName": "华为智能眼镜 2",
+        "productImageSrc": "http://localhost:3000/huawei-eyewear-2.jpg"
+      },
+      {
+        "productName": "HUAWEI FreeClip 耳夹耳机",
+        "productImageSrc": "http://localhost:3000/freeclip.jpg"
+      }
+    ]
+  }
+]
