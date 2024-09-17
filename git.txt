@@ -7,4 +7,4 @@ git remote add origin https://gitee.com/g-d_1/huawei-consumer-web-copy.git
 git branch -M master
 git push -u origin master
 
-测试同步
+测试同步1
