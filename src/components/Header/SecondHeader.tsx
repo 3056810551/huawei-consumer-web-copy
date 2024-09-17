@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from "react";
-import { HeaderProps } from "./type";
 import { CiSearch } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import HoverActiveNavBar from "@components/Hover/HoverActiveNavBar";
 
-const SecondHeader: React.FC<HeaderProps> = () => {
+const SecondHeader: React.FC = () => {
   const [scrollY, setScrollY] = useState<number>(0);
 
   useEffect(() => {
@@ -56,9 +55,10 @@ const SecondHeader: React.FC<HeaderProps> = () => {
         <div className="flex h-14 w-full items-center px-10 py-0">
           <a title="logo" href="#" data-navicon="logo">
             <img
-              src="http://localhost:3000/logo.svg
-            "
+              src="http://localhost:3000/logo.svg"
               alt="logo"
+              width={110}
+              height={"auto"}
             />
           </a>
           <nav className="ml-16 mr-10 flex w-64 flex-1 items-center justify-between">

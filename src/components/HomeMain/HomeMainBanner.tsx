@@ -19,10 +19,7 @@ const HomeMainBanner: React.FC<BannerProps> = ({
 
   return (
     <>
-      <div
-        className={`w-full cursor-pointer p-1 ${height}`}
-        style={defineStyle}
-      >
+      <div className={`w-full cursor-pointer ${height}`} style={defineStyle}>
         <div className="relative h-full w-full overflow-hidden rounded-lg bg-white">
           <div className="relative h-full w-full overflow-hidden">
             <Image
