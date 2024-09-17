@@ -10,6 +10,8 @@
 https://consumer.huawei.com/cn/
 ```
 
+![localhost_3000_](./assets/localhost_3000_.png)
+
 ```
 Nodejs 18.20
 npm install
