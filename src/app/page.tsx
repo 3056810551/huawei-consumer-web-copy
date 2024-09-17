@@ -43,20 +43,57 @@ export default function Page() {
   return (
     <>
       <Header logoAlt="Huawei-v4" />
-      {bannerData.map((banner, index) => (
-        <HomeMainBanner
-          key={index}
-          src={banner.src}
-          title={banner.title}
-          description={banner.description}
-          textColor={banner.textColor === "white" ? banner.textColor : "black"}
-          boxShadow={
-            banner.boxShadow === "no-shadow"
-              ? banner.boxShadow
-              : "no-text-shadow"
-          }
-        />
-      ))}
+      <div className="px-10">
+        {bannerData.slice(0, 4).map((banner, index) => {
+          return (
+            <HomeMainBanner
+              key={index}
+              src={banner.src}
+              title={banner.title}
+              description={banner.description}
+              textColor={
+                banner.textColor === "white" ? banner.textColor : "black"
+              }
+              boxShadow={
+                banner.boxShadow === "no-shadow"
+                  ? banner.boxShadow
+                  : "no-text-shadow"
+              }
+            />
+          );
+        })}
+      </div>
+      <div
+        className="grid grid-flow-row px-10"
+        style={{
+          gridTemplateColumns: "repeat(2, 1fr)",
+          gridAutoRows: "minmax(100px, auto)",
+        }}
+      >
+        {bannerData.slice(5, 11).map((banner, index) => {
+          return (
+            <HomeMainBanner
+              buttonSize="small"
+              key={index}
+              src={banner.src}
+              title={banner.title}
+              description={banner.description}
+              height="h-[520px]"
+              hFontSize="text-3xl"
+              pFontSize="text-xl"
+              textColor={
+                banner.textColor === "white" ? banner.textColor : "black"
+              }
+              boxShadow={
+                banner.boxShadow === "no-shadow"
+                  ? banner.boxShadow
+                  : "no-text-shadow"
+              }
+            />
+          );
+        })}
+      </div>
+
       <ProductsDisplay />
       <Footer />
     </>

@@ -37,6 +37,7 @@ const config: Config = {
       },
       fontSize: {
         "40": "40px",
+        "10": "10px",
       },
     },
   },

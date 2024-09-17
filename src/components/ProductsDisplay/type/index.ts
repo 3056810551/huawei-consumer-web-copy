@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export interface ProductProps {
   productName: string;
   productImageSrc: string;
@@ -18,6 +20,12 @@ export interface BannerProps {
   secondaryButtonText?: string; // 默认为“购买”
   textColor?: "white" | "black"; // 文本颜色，默认为白色
   boxShadow?: "no-shadow" | "no-text-shadow"; // 文本颜色，默认为白色
+  width?: string;
+  defineStyle?: CSSProperties;
+  height?: string;
+  hFontSize?: string;
+  pFontSize?: string;
+  buttonSize?: import("antd/es/config-provider/SizeContext.d.ts").SizeType; // 使用 antd 的 SizeType 类型
 }
 
 export type productsDataProps = {
