@@ -23,7 +23,7 @@ const ProductGrid: React.FC = () => {
       })
       .then((data) => setData(data))
       .catch((error) => setError(error.message));
-  }, []);
+  }, [hoverContent]);
 
   const dataList = Array.isArray(data) ? data : [];
   const productsData: Array<{

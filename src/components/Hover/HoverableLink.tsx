@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleRight } from "react-icons/fa";
-
-// 定义 icon 类型，它可以是一个 React 组件或者是一个字符串
-type IconType = React.ReactElement | string | null;
-
-// 定义 HoverableLink 组件的 props 类型
-interface HoverableLinkProps {
-  title: string;
-  description: string;
-  icon?: IconType; // icon 可以是 React 组件、字符串或者 null
-  [propName: string]: unknown; // 允许传递任意的其他属性
-}
+import { HoverableLinkProps } from "./type";
 
 const HoverableLink: React.FC<HoverableLinkProps> = ({
   title,
