@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BannerProps } from "./ProductsDisplay/type";
+import { BannerProps } from "../ProductsDisplay/type";
 
 const HomeMainBanner: React.FC<BannerProps> = ({
   src,

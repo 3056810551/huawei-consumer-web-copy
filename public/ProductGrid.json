@@ -13,12 +13,13 @@
       },
       {
         "productName": "HUAWEI Pura 70",
-        "productImageSrc": "http://localhost:3000/pocket-2.jpg"
+        "productImageSrc": "http://localhost:3000/phones-ah-id.jpg"
       },
       {
         "productName": "HUAWEI Pocket 2",
         "productImageSrc": "http://localhost:3000/pocket-2.jpg"
       },
+
       {
         "productName": "HUAWEI Mate 60 Pro",
         "productImageSrc": "http://localhost:3000/mate-60-pro.jpg"
