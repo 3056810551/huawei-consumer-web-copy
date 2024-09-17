@@ -20,7 +20,7 @@ npm install
 npm run dev
 ```
 
-## 访问
+## 本地访问
 
 ```
 http://localhost:3000/
