@@ -1,11 +1,36 @@
+import { useHoverContent } from "@components/Hover/HoverContentContext";
 import ProductCard from "./ProductCard";
+import { useEffect, useState } from "react";
 
+type productsDataProps = {
+  type: string;
+  data: [];
+};
 const ProductGrid: React.FC = () => {
+  const [data, setData] = useState<productsDataProps[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [error, setError] = useState(null);
+  const { hoverContent } = useHoverContent();
+
+  useEffect(() => {
+    fetch("http://localhost:3000/productGrid.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        return response.json();
+      })
+      .then((data) => setData(data))
+      .catch((error) => setError(error.message));
+  }, []);
+
+  const dataList = Array.isArray(data) ? data : [];
   const productsData: Array<{
     productName: string;
     productImageSrc: string;
     productInfo?: string;
-  }> = [
+  }> = dataList.find((item) => item.type === hoverContent)?.data || [
     {
       productName: "手机",
       productImageSrc: "http://localhost:3000/pura70-pro-plus.jpg",
@@ -50,7 +75,7 @@ const ProductGrid: React.FC = () => {
               <picture>
                 <img
                   className="h-full w-full object-cover"
-                  src="http://localhost:3000//mate-xt-ultimate-design.jpg"
+                  src={productsData[0].productImageSrc}
                   alt={productsData[0].productName}
                 />
               </picture>

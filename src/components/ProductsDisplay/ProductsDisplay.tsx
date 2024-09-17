@@ -1,5 +1,6 @@
 import HoverActiveNavBar from "@components/Hover/HoverActiveNavBar";
 import ProductGrid from "./ProductGrid";
+import HoverContentProvider from "@components/Hover/HoverContentProvider";
 
 const ProductsDisplay: React.FC = ({}) => {
   const navigationFItems = [
@@ -20,15 +21,18 @@ const ProductsDisplay: React.FC = ({}) => {
           </div>
         </div>
         <div>
-          <div className="flex justify-center">
-            <HoverActiveNavBar
-              items={navigationFItems}
-              ulClassName="flex items-center"
-              liclassName="relative mr-5 text-xl "
-              isProductsDisplay={true}
-            />
-          </div>
-          <ProductGrid />
+          <HoverContentProvider>
+            <div className="flex justify-center">
+              <HoverActiveNavBar
+                activateFirstItem={true}
+                items={navigationFItems}
+                ulClassName="flex items-center"
+                liclassName="relative mr-5 text-xl "
+                isProductsDisplay={true}
+              />
+            </div>
+            <ProductGrid />
+          </HoverContentProvider>
         </div>
       </div>
     </>

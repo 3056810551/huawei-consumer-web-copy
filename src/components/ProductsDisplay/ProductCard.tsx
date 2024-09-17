@@ -24,11 +24,11 @@ const ProductCard: React.FC<ProductProps> = ({
           {productName}
         </div>
         <div className="flex flex-wrap items-center justify-center text-xs font-bold text-black">
-          <div className="mb-2 mr-3 flex items-center">
+          <div className="mb-2 mr-3 flex items-center justify-center">
             <a href="#">了解更多</a>
             <FaAngleRight />
           </div>
-          <div className="mb-2 mr-3 flex items-center">
+          <div className="mb-2 mr-3 flex items-center justify-center">
             <a href="#">购买</a>
             <FaAngleRight />
           </div>
