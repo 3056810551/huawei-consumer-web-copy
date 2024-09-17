@@ -1,12 +1,11 @@
 import FirstHeader from "./FirstHeader";
 import SecondHeader from "./SecondHeader";
-import { HeaderProps } from "./type";
 
-const Header: React.FC<HeaderProps> = ({ logoAlt }) => {
+const Header: React.FC = () => {
   return (
     <>
       <FirstHeader />
-      <SecondHeader logoAlt={logoAlt} />
+      <SecondHeader />
     </>
   );
 };

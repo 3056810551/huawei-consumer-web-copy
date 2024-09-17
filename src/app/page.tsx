@@ -14,7 +14,7 @@ import ProductsDisplay from "@components/ProductsDisplay/ProductsDisplay";
 export default function Page() {
   return (
     <>
-      <Header logoAlt="Huawei-v4" />
+      <Header />
       <HomeMain />
       <ProductsDisplay />
       <Footer />
