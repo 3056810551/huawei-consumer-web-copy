@@ -8,3 +8,4 @@ export type FooterSectionProps = {
   links: FooterLinkProps[];
   marginB?: string;
 };
+
